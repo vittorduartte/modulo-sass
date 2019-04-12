@@ -10,10 +10,10 @@ const notify 	= require("gulp-notify");
 */
 
 gulp.task("sass", function(){
-	return gulp.src(['./sass/*.sass','./scss/*.scss'])
+	return gulp.src('./source/scss/style.scss')
 				.pipe(sass())
 				.on("error", notify.onError({title:"erro ao compilar", message:"<%= error.message %>"}))
-				.pipe(gulp.dest("./css"))
+				.pipe(gulp.dest("./dist/css"))
 });
 
 /*
@@ -23,8 +23,7 @@ gulp.task("sass", function(){
 */
 
 gulp.task("sass:watch", function(){
-	gulp.watch("./sass/*.sass", ['sass']);
-	gulp.watch("./scss/*.scss", ['sass']);
+	gulp.watch("./source/scss/**/*.scss", ['sass']);
 });
 
 /*

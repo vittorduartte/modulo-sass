@@ -1,0 +1,22 @@
+@mixin navbar-menu($font-color, $background-color){
+    float: right;
+    ul {
+        margin: 10px auto 10x auto;
+        padding: 3px 0px;
+        float: right;
+
+        li{
+            display: inline-block;
+            padding: 2px 10px;
+
+            a {
+                color: $font-color;
+                font-weight: bold;
+                text-decoration: none;
+                margin: 0px 10px 0px 10px;
+            } :hover {
+                background-color: $background-color;
+              }
+        } 
+    }
+}
